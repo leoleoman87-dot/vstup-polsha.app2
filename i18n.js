@@ -1,0 +1,10 @@
+const D={uk:{login:'Увійти',signup:'Реєстрація',email:'Email',password:'Пароль',name:"Ім'я та прізвище",logout:'Вийти',tests:'Тести',start:'Почати',submit:'Завершити',score:'Результат',level:'Рівень',online:'онлайн',seen:'був(ла)',ready:'Готовий(а) до наступного рівня',left:'Залишилось тестів',move:'Перевести на наступний рівень',readyAll:'Вибрати готових',next:'→ далі',noTests:'Тестів поки немає',students:'Студенти',all:'Усі',onlyOn:'Тільки онлайн',install:'Встановити додаток',installBtn:'Встановити',installIos:'Натисніть «Поділитися» → «На екран Додому»'},
+pl:{login:'Zaloguj się',signup:'Rejestracja',email:'Email',password:'Hasło',name:'Imię i nazwisko',logout:'Wyloguj',tests:'Testy',start:'Start',submit:'Zakończ',score:'Wynik',level:'Poziom',online:'online',seen:'ostatnio',ready:'Gotowy do następnego poziomu',left:'Pozostało testów',move:'Przenieś na wyższy poziom',readyAll:'Zaznacz gotowych',next:'→ dalej',noTests:'Brak testów',students:'Kursanci',all:'Wszyscy',onlyOn:'Tylko online',install:'Zainstaluj aplikację',installBtn:'Zainstaluj',installIos:'Kliknij „Udostępnij” → „Do ekranu głównego”'}}
+let lang=localStorage.getItem('lang')||'uk'
+export const setLang=l=>{lang=l;localStorage.setItem('lang',l)}
+export const getLang=()=>lang
+export const t=k=>D[lang][k]||k
+Object.assign(D.uk,{home:'Головна',videos:'Відео',chat:'Чат',send:'Надіслати',title:'Назва',link:'Посилання на відео',addVideo:'Додати відео',watched:'Переглянуто',markWatched:'Позначити як переглянуте'})
+Object.assign(D.pl,{home:'Start',videos:'Wideo',chat:'Czat',send:'Wyślij',title:'Tytuł',link:'Link do wideo',addVideo:'Dodaj wideo',watched:'Obejrzane',markWatched:'Oznacz jako obejrzane'})
+Object.assign(D.uk,{groups:'Групи',search:'Пошук',back:'← Назад',solvedQ:'питань',days:'днів',readyShort:'Готові',mostSolved:'Найбільше питань',mostActive:'Найактивніші',addQuestion:'Додати питання',soon:'скоро'})
+Object.assign(D.pl,{groups:'Grupy',search:'Szukaj',back:'← Wstecz',solvedQ:'pytań',days:'dni',readyShort:'Gotowi',mostSolved:'Najwięcej pytań',mostActive:'Najaktywniejsi',addQuestion:'Dodaj pytanie',soon:'wkrótce'})
